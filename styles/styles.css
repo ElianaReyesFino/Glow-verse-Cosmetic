@@ -1,0 +1,298 @@
+:root {
+  --bs-gray: #F1F1F1;
+  --bs-pink: #BCA0A0;
+  --bs-pink-dark: #916d6d;
+  /* Ejemplo para llamar las variables
+  background-color: var(--bs-pink)!important; */
+}
+
+body {
+    font-family: 'Assistant', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: transparent;
+    color: #ffffff; /* Color de letra blanco */
+    transition: background-color 0.5s, color 0.5s;
+  
+  }
+  
+  .navbarpaula {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    background-color: transparent;
+    z-index: 1000;
+    transition: background-color 0.5s;
+   
+  }
+  
+  .navbarpaula.scrolled {
+    background-color: #ffffff; /* Fondo blanco al bajar la página */
+  }
+  
+
+.menupaula {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    color: #fff; /* Texto blanco */
+  }
+  
+  .logopaula {
+    display: flex;
+    align-items: center;
+  }
+  
+  .logopaula img {
+    width: 70px; /* Ancho de la imagen del logo */
+    height: auto;
+    margin-right: 10px;
+  }
+  
+  .company-namepaula {
+    font-weight: bold;
+    font-size: 1.2em; /* Tamaño del texto del nombre de la empresa */
+  
+  }
+  
+  
+  .menupaula ul {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+  }
+  
+  .menupaula ul li {
+    transition: color 0.5s;
+  }
+  
+  .menupaula ul li a {
+    text-decoration: none;
+    color: inherit;
+    transition: color 0.5s;
+  }
+  
+  #contactLink {
+    border: 2px solid transparent; /* Borde inicialmente transparente */
+    border-radius: 50px;
+    padding: 8px 12px;
+    transition: border-color 0.5s; /* Agregar transición al color del borde */
+  }
+  
+  
+  .content {
+    padding-top: 100px; 
+  }
+
+  .linksContact {
+    color: var(--bs-pink-dark);
+  }
+
+  /* ... (otros estilos) ... */
+/* Estilos por defecto */
+.menupaula ul {
+  display: flex;
+  list-style-type: none;
+  align-items: center;
+}
+
+/* Estilos para tamaños de pantalla menores (menú hamburguesa) */
+@media screen and (max-width: 768px) {
+    .menupaula ul {
+        display: none;
+        flex-direction: column;
+        position: absolute;
+        top: 60px;
+        left: 0;
+        width: 60%; /* Limita el ancho del menú al 60% */
+        max-width: 250px; /* Establece un máximo de ancho para el menú */
+        background-color: #333; /* Cambia el color del fondo del menú hamburguesa */
+        border-radius: 5px; /* Agrega bordes redondeados al menú */
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); /* Agrega una sombra al menú */
+        z-index: 1000; /* Asegura que el menú esté encima de otros elementos */
+        left: 50%;
+    transform: translateX(-50%);
+      }
+
+  .menupaula ul.active {
+    display: flex;
+  }
+
+  .menupaula ul li {
+    text-align: center;
+    margin: 10px 0;
+  }
+
+  .mobile-menu-icon {
+    display: block;
+    cursor: pointer;
+    padding: 10px;
+    transition: color 0.3s ease;
+    
+  }
+  .mobile-menu-icon.scrolled {
+    color: #4B4234; /* Cambia el color del ícono al hacer scroll */
+  }
+
+  .mobile-menu-icon .bar {
+    width: 25px;
+    height: 3px;
+    background-color: #fff;
+    margin: 5px 0;
+    transition: 0.4s;
+  }
+
+  .mobile-menu-icon.open .bar:nth-child(1) {
+    transform: rotate(-45deg) translate(-5px, 6px);
+  }
+
+  .mobile-menu-icon.open .bar:nth-child(2) {
+    opacity: 0;
+  }
+
+  .mobile-menu-icon.open .bar:nth-child(3) {
+    transform: rotate(45deg) translate(-5px, -6px);
+  }
+  
+}
+
+  
+  
+
+
+
+  
+
+
+
+
+
+
+
+.productos-section {
+    text-align: center;
+    padding: 50px 0;
+    background-color: #F6F4F3;
+    padding-left: 10%;
+    padding-right: 10%;
+  }
+  
+  .section-title {
+    font-size: 2em;
+    margin-bottom: 20px;
+    color: #BCA0A0;
+  }
+  
+  .section-description {
+    font-size: 1.1em;
+    color: #4B4234;
+    margin-bottom: 40px;
+  }
+  
+  .products-carousel {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+  }
+  
+  .product-card {
+    width: 250px;
+    margin-bottom: 30px;
+    padding: 15px;
+    border: 1px solid #ffffff;
+    background-color: #ffffff;
+    border-radius: 8px;
+  }
+  
+  .product-card img {
+    width: 100%;
+    height: auto;
+    border-radius: 5px;
+    margin-bottom: 10px;
+  }
+  
+  .product-card h3 {
+    margin-bottom: 5px;
+    color: #31241E;
+  }
+  
+  .price {
+    font-weight: bold;
+    color: #4B4234;
+    margin-bottom: 10px;
+  }
+  
+  .btn {
+    display: inline-block;
+    padding: 5px 15px;
+    text-decoration: none;
+    background-color: #D1C8C1;
+    color: #4B4234;
+    border-radius: 5px;
+  }
+  
+  #contacto {
+    color:#BCA0A0;
+  }
+
+  
+
+  
+
+
+  /* main */
+.btn-main:hover {
+    color: var(--bs-pink-dark)!important;
+    font-weight: bold;
+    background-color: #D1C8C1!important;
+}
+
+.main-message button {
+    padding: 10px 20px;
+}
+
+.main-message img {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+}
+
+/* SOBRE NOSOTROS */
+.btn-us {
+    background-color: var(--bs-pink)!important;
+    color: white!important;
+    font-weight: bold!important;
+}
+
+.footer-color {
+    background-color: var(--bs-pink)!important;
+    color: white;
+}
+
+.logo1 {
+    width: 50px;
+}
+
+.footer-copyright {
+  background-color: rgba(0, 0, 0, 0.05)!important;
+}
+
+@media (max-width:600px) {
+  .main-message {
+      font-size: 10px;
+
+  }
+
+  .main-message img {
+      height: 60vh;
+  }
+
+  .banner-text {
+    margin-top: 40px;
+  }
+}
